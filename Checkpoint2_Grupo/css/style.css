@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Nunito+Sans:wght@300;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+/*-----MENU-----*/
+
+header {
+  background-color: #da3e52;
+}
+.menu {
+  height: 55px;
+  background-color: #da3e52;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  padding-left: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.menu ul {
+  list-style: none;
+  position: relative;
+}
+
+.menu ul li {
+  width: 200px;
+  float: left;
+}
+
+.menu a {
+  padding: 13px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background-color: #da3e52;
+  color: white;
+}
+
+.menu ul ul {
+  position: absolute;
+  visibility: hidden;
+}
+
+.menu ul li:hover li {
+  visibility: visible;
+}
+
+.menu a:hover {
+  background-color: white;
+  color: #da3e52;
+}
+
+.menu ul ul li {
+  float: none;
+  border-bottom: solid 1px white;
+}
+
+label[for='bt_menu'] {
+  padding: 5px;
+  background-color: #da3e52;
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+#bt_menu {
+  display: none;
+}
+
+label[for='bt_menu'] {
+  display: inline-flexbox;
+}
+@media (max-width: 800px) {
+  label[for='bt_menu'] {
+    display: inline-block;
+  }
+  #bt_menu:checked ~ .menu {
+    margin-left: 0px;
+  }
+  .menu {
+    padding-left: 0px;
+    margin-left: -100%;
+    transition: all 0.4s;
+  }
+  .menu ul li {
+    width: 100%;
+    float: none;
+  }
+  .menu ul ul {
+    position: static;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.1s;
+  }
+  .menu ul li:hover {
+    height: auto;
+    max-height: 200px;
+  }
+}
+
+/*-----HEADER-----*/
+.img-cidade {
+  background-image: url('https://www.cvc.com.br/dicas-de-viagem/wp-content/uploads/2020/12/Salvador.png');
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.titulo-cidade {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 90px;
+  text-align: center;
+  padding-top: 200px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.subtitulo-cidade {
+  color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+/*-----MAIN-----*/
+main {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+/*----SOBRE-----*/
+#sobre {
+  width: 100%;
+  display: flex;
+}
+
+.text-box {
+  width: 49%;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.text-main {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  color: #0d1317;
+}
+
+.text-main strong {
+  color: #4062bb;
+}
+
+/*-----CURIOSIDADES-----*/
+
+.sub-title {
+  text-align: center;
+  font-size: 32px;
+  color: #da3e52;
+  font-family: 'Montserrat', sans-serif;
+  padding: 30px 0 0;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#curiosidades {
+  width: 100%;
+  display: block;
+}
+
+.cur-box {
+  width: 49%;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px 40px 60px;
+  vertical-align: top;
+}
+
+.cur-itens {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  color: #0d1317;
+  list-style-type: circle;
+  padding-bottom: 10px;
+}
+
+/*-----FOOTER-----*/
+
+footer {
+  background-color: #da3e52;
+  padding: 10px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text-footer {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  padding-right: 20px;
+}
+
+.links-sociais {
+  display: inline-block;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.icones-sociais {
+  width: 30px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*-----MEDIA QUERYS-----*/
+@media only screen and (max-width: 800px) {
+  .cur-box,
+  .text-box {
+    width: 100%;
+    display: block;
+  }
+}
